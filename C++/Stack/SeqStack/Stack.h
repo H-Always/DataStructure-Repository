@@ -1,8 +1,8 @@
 #pragma once
 /**
  * @FlieName SequenceList
- * @Description: TODO Ë³ĞòÕ»½á¹¹
- * @Author ÓàËª
+ * @Description: TODO é¡ºåºæ ˆç»“æ„
+ * @Author ä½™éœœ
  * @Date 2019/10/4
  * @Version V1.0
  **/
@@ -12,27 +12,27 @@ using ElementType = int;
 typedef struct Stack
 {
 	ElementType stack[MAXSIZE];
-	int top; 		//Ö¸ÕëÓò
+	int top; 		//æŒ‡é’ˆåŸŸ
 }*SeqStack;
 
 
-//³õÊ¼»¯
+//åˆå§‹åŒ–
 void InitStack(SeqStack s);
 
-//ÅĞ¶ÏÊÇ·ñÎª¿Õ
+//åˆ¤æ–­æ˜¯å¦ä¸ºç©º
 bool StackEmpty(SeqStack s);
 
-//Ñ¹Õ»
+//å‹æ ˆ
 bool PushStack(SeqStack s, ElementType value);
 
-//µ¯Õ»
+//å¼¹æ ˆ
 ElementType PopStack(SeqStack s);
 
-//´òÓ¡ÔªËØ
+//æ‰“å°å…ƒç´ 
 void PrintStack(SeqStack s);
 
-//»ñµÃ³¤¶È
+//è·å¾—é•¿åº¦
 int StackLength(SeqStack s);
 
-//Çå¿ÕÕ»
+//æ¸…ç©ºæ ˆ
 void StackClear(SeqStack s);
