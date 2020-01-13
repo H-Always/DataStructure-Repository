@@ -2,8 +2,8 @@
 #include "Stack.h"
 /**
  * @FlieName SequenceList
- * @Description: TODO Ë³ÐòÕ»·½·¨ÊµÏÖ
- * @Author ÓàËª
+ * @Description: TODO é¡ºåºæ ˆæ–¹æ³•å®žçŽ°
+ * @Author ä½™éœœ
  * @Date 2019/10/4
  * @Version V1.0
  **/
@@ -23,7 +23,7 @@ bool StackEmpty(SeqStack s)
 	return false;
 }
 
-//ÈëÕ»
+//å…¥æ ˆ
 bool PushStack(SeqStack s, ElementType value)
 {
 	if (s->top == MAXSIZE)
@@ -36,7 +36,7 @@ bool PushStack(SeqStack s, ElementType value)
 	return true;
 }
 
-//µ¯Õ»
+//å¼¹æ ˆ
 ElementType PopStack(SeqStack s)
 {
 	if (s->top == 0)
@@ -49,7 +49,7 @@ ElementType PopStack(SeqStack s)
 	return s->stack[s->top];
 }
 
-//´òÓ¡ÔªËØ
+//æ‰“å°å…ƒç´ 
 void PrintStack(SeqStack s) 
 {
 	if (s->top==0)
@@ -64,14 +64,14 @@ void PrintStack(SeqStack s)
 	return;
 }
 
-//»ñµÃ³¤¶È
+//èŽ·å¾—é•¿åº¦
 int StackLength(SeqStack s)
 {
 	return s->top;
 }
 
 
-//Çå¿ÕÕ»
+//æ¸…ç©ºæ ˆ
 void StackClear(SeqStack s)
 {
 	s->top = 0;
