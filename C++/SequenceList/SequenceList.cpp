@@ -2,14 +2,14 @@
 #include "SequenceList.h"
 /**
  * @FlieName SequenceList
- * @Description: TODO Ë³Ğò±í·½·¨ÊµÏÖ
- * @Author ÓàËª
+ * @Description: TODO é¡ºåºè¡¨æ–¹æ³•å®ç°
+ * @Author ä½™éœœ
  * @Date 2019/10/3
  * @Version V1.0
  **/
 
 
-//³õÊ¼»¯,¾ÍÊÇ°ÑÒ»¸öË³Ğò±íÖÃÎª¿Õ£¬Èç¹û²»Îª¿ÕµÄ»°£¬Ö±½Ó°Ñ³¤¶ÈÖÃÎªÁã¾ÍĞĞ
+//åˆå§‹åŒ–,å°±æ˜¯æŠŠä¸€ä¸ªé¡ºåºè¡¨ç½®ä¸ºç©ºï¼Œå¦‚æœä¸ä¸ºç©ºçš„è¯ï¼Œç›´æ¥æŠŠé•¿åº¦ç½®ä¸ºé›¶å°±è¡Œ
 void InitList(SeqList *L)
 {
 	if (L == NULL)
@@ -22,7 +22,7 @@ void InitList(SeqList *L)
 }
 
 
-//»ñµÃµ±Ç°Ë³Ğò±í³¤¶È
+//è·å¾—å½“å‰é¡ºåºè¡¨é•¿åº¦
 int ListLength(SeqList *L)
 {
 	if (L == NULL)
@@ -34,7 +34,7 @@ int ListLength(SeqList *L)
 }
 
 
-//»ñµÃµÚi¸öÔªËØµÄÖµ
+//è·å¾—ç¬¬iä¸ªå…ƒç´ çš„å€¼
 int GetData(PSeqList L, int i) 
 {
 	if (i > L->length || i < 1)
@@ -47,9 +47,9 @@ int GetData(PSeqList L, int i)
 }
 
 
-//²åÈëÔªËØ ,ÏÈÅĞ¶ÏÊÇ·ñºÏ·¨
-//ºÏ·¨Ìõ¼şÊÇ²åÈëÏÂ±ê²»ÄÜĞ¡ÓÚ1£¬²»ÄÜ´óÓÚlength+1£¬±íÂú²»ÄÜ²åÈë
-//×îºó²åÈëÍêÔªËØ¼ÇµÃlength++
+//æ’å…¥å…ƒç´  ,å…ˆåˆ¤æ–­æ˜¯å¦åˆæ³•
+//åˆæ³•æ¡ä»¶æ˜¯æ’å…¥ä¸‹æ ‡ä¸èƒ½å°äº1ï¼Œä¸èƒ½å¤§äºlength+1ï¼Œè¡¨æ»¡ä¸èƒ½æ’å…¥
+//æœ€åæ’å…¥å®Œå…ƒç´ è®°å¾—length++
 bool InsertList(PSeqList L, int k, ElementType e)
 {
 	if (k > L->length + 1 || k < 1)
@@ -76,7 +76,7 @@ bool InsertList(PSeqList L, int k, ElementType e)
 }
 
 
-//É¾³ı²Ù×÷£¬Èç¹ûºÏ·¨µÄ»°£¬´ÓºóÏòÇ°¸²¸Ç
+//åˆ é™¤æ“ä½œï¼Œå¦‚æœåˆæ³•çš„è¯ï¼Œä»åå‘å‰è¦†ç›–
 bool DelList(PSeqList L, ElementType k)
 {
 	if (k<1||k>L->length)
@@ -96,7 +96,7 @@ bool DelList(PSeqList L, ElementType k)
 }
 
 
-//ÔªËØ²éÕÒ£¬Èç¹û´æÔÚ¾Í·µ»Ø¸ÃÔªËØËùÔÚÎ»ÖÃ
+//å…ƒç´ æŸ¥æ‰¾ï¼Œå¦‚æœå­˜åœ¨å°±è¿”å›è¯¥å…ƒç´ æ‰€åœ¨ä½ç½®
 int Locate(PSeqList L, ElementType e)
 {
 	for (int i = 0; i < L->length; i++)
@@ -112,7 +112,7 @@ int Locate(PSeqList L, ElementType e)
 	return 0;
 }
 
-//ÔÚ±íÍ·²åÈëÔªËØ
+//åœ¨è¡¨å¤´æ’å…¥å…ƒç´ 
 bool PushFront(PSeqList L, ElementType e)
 {
 	if (L->length == MaxSize)
@@ -131,7 +131,7 @@ bool PushFront(PSeqList L, ElementType e)
 	return true;
 }
 
-//É¾³ı±íÍ·ÔªËØ
+//åˆ é™¤è¡¨å¤´å…ƒç´ 
 bool PopFront(PSeqList L)
 {
 	if (EmptyList(L))
@@ -151,7 +151,7 @@ bool PopFront(PSeqList L)
 }
 
 
-//Î²²å
+//å°¾æ’
 bool PushBack(PSeqList L, ElementType e)
 {
 	if (L->length == MaxSize)
@@ -166,7 +166,7 @@ bool PushBack(PSeqList L, ElementType e)
 	return true;
 }
 
-//Î²É¾
+//å°¾åˆ 
 bool PopBack(PSeqList L)
 {
 	if (EmptyList(L))
@@ -180,7 +180,7 @@ bool PopBack(PSeqList L)
 	return true;
 }
 
-//Çå¿ÕÕû¸ö±í
+//æ¸…ç©ºæ•´ä¸ªè¡¨
 bool ClearList(PSeqList L)
 {
 	L->length = 0;
@@ -188,7 +188,7 @@ bool ClearList(PSeqList L)
 	return true;
 }
 
-//ÅĞ¶Ï±íÊÇ·ñÎª¿Õ
+//åˆ¤æ–­è¡¨æ˜¯å¦ä¸ºç©º
 bool EmptyList(PSeqList L)
 {
 	if (L->length == 0)
@@ -199,7 +199,7 @@ bool EmptyList(PSeqList L)
 	return false;
 }
 
-//´òÓ¡ÔªËØ
+//æ‰“å°å…ƒç´ 
 void PrintList(PSeqList L)
 {
 	if (EmptyList(L))
