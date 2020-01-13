@@ -1,55 +1,55 @@
 #pragma once
 /**
  * @FlieName SequenceList
- * @Description: TODO Á´±íÍ·ÎÄ¼ş
- * @Author ÓàËª
+ * @Description: TODO é“¾è¡¨å¤´æ–‡ä»¶
+ * @Author ä½™éœœ
  * @Date 2019/10/3
  * @Version V1.0
  **/
 
-using ElementType = int;	//¶¨ÒåÔªËØÀàĞÍ
+using ElementType = int;	//å®šä¹‰å…ƒç´ ç±»å‹
 
 typedef struct Node
 {
-	ElementType Data;		//Êı¾İÓò
-	Node* Next = NULL;		//Ö¸ÕëÓò
+	ElementType Data;		//æ•°æ®åŸŸ
+	Node* Next = NULL;		//æŒ‡é’ˆåŸŸ
 }*LinkList;
 
 
-//µ¥Á´±íµÄ³õÊ¼»¯
+//å•é“¾è¡¨çš„åˆå§‹åŒ–
 bool InitList(Node* Head);
 
-//ÅĞ¶Ïµ¥Á´±íÊÇ·ñÎª¿Õ
+//åˆ¤æ–­å•é“¾è¡¨æ˜¯å¦ä¸ºç©º
 bool Empty(LinkList Head);
 
-//Í·²å·¨´´½¨Á´±í
+//å¤´æ’æ³•åˆ›å»ºé“¾è¡¨
 void CreatFormHead(LinkList Head);
 
-//Î²²å·¨´´½¨
+//å°¾æ’æ³•åˆ›å»º
 void CreatFormTail(Node* Head);
 
-//»ñµÃÏÂ±êÔªËØ
+//è·å¾—ä¸‹æ ‡å…ƒç´ 
 int GetIndex(LinkList Head, int i);
 
-//»ñµÃµÚÒ»¸öÖµ¶ÔÓ¦ÏÂ±ê
+//è·å¾—ç¬¬ä¸€ä¸ªå€¼å¯¹åº”ä¸‹æ ‡
 int GetLocation(LinkList Head, ElementType value);
 
-//»ñÈ¡³¤¶È
+//è·å–é•¿åº¦
 int length(LinkList Head);
 
-//²åÈë½Úµã
+//æ’å…¥èŠ‚ç‚¹
 bool InsertNode(LinkList Head, int i, ElementType value);
 
-// É¾³ıÖ¸¶¨ÔªËØ½Úµã
+// åˆ é™¤æŒ‡å®šå…ƒç´ èŠ‚ç‚¹
 bool DelValue(LinkList Head,ElementType value);
 
-// É¾³ıÖ¸¶¨ÏÂ±ê½Úµã
+// åˆ é™¤æŒ‡å®šä¸‹æ ‡èŠ‚ç‚¹
 bool DelIndex(LinkList Head, int i);
 
-//Çå¿ÕÁ´±í
+//æ¸…ç©ºé“¾è¡¨
 void ClearList(LinkList Head);
 
-//´òÓ¡ËùÓĞÔªËØ
+//æ‰“å°æ‰€æœ‰å…ƒç´ 
 void PrintList(LinkList Head);
 
 
