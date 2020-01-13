@@ -3,16 +3,16 @@
 #include "LinkList.h"
 /**
  * @FlieName SequenceList
- * @Description: TODO Á´±í·½·¨ÊµÏÖ
- * @Author ÓàËª
+ * @Description: TODO é“¾è¡¨æ–¹æ³•å®ç°
+ * @Author ä½™éœœ
  * @Date 2019/10/3
  * @Version V1.0
  **/
 
 using namespace std;
 
-//³õÊ¼»¯£¬Ò²¾ÍÊÇ·ÖÅäÒ»ÏÂÄÚ´æÈ»ºóÖÃÎª¿Õ
-//´´½¨ÍêÁ´±í¾ÍÒª³õÊ¼»¯
+//åˆå§‹åŒ–ï¼Œä¹Ÿå°±æ˜¯åˆ†é…ä¸€ä¸‹å†…å­˜ç„¶åç½®ä¸ºç©º
+//åˆ›å»ºå®Œé“¾è¡¨å°±è¦åˆå§‹åŒ–
 bool InitList(Node* Head)
 {
 	Head = (LinkList)malloc(sizeof(LinkList));
@@ -28,7 +28,7 @@ bool InitList(Node* Head)
 	return true;
 }
 
-//ÅĞ¶ÏÊÇ·ñÎª¿ÕÁ´±í
+//åˆ¤æ–­æ˜¯å¦ä¸ºç©ºé“¾è¡¨
 bool Empty(LinkList Head)
 {
 	if (Head->Next == NULL)
@@ -39,7 +39,7 @@ bool Empty(LinkList Head)
 	return false;
 }
 
-//Í·²å´´½¨Á´±í
+//å¤´æ’åˆ›å»ºé“¾è¡¨
 void CreatFormHead(LinkList Head)
 {
 	
@@ -61,7 +61,7 @@ void CreatFormHead(LinkList Head)
 	
 }
 
-//Î²²å·¨´´½¨
+//å°¾æ’æ³•åˆ›å»º
 void CreatFormTail(LinkList Head)
 {
 	LinkList p ;
@@ -80,7 +80,7 @@ void CreatFormTail(LinkList Head)
 }
 
 
-//»ñµÃÊäÈëÏÂ±êÔªËØ
+//è·å¾—è¾“å…¥ä¸‹æ ‡å…ƒç´ 
 int GetIndex(LinkList Head, int k)
 {
 	if (Empty(Head))
@@ -113,7 +113,7 @@ int GetIndex(LinkList Head, int k)
 }
 
 
-//»ñµÃµÚÒ»¸öÊäÈëÔªËØ¶ÔÓ¦ÏÂ±ê
+//è·å¾—ç¬¬ä¸€ä¸ªè¾“å…¥å…ƒç´ å¯¹åº”ä¸‹æ ‡
 int GetLocation(LinkList Head, ElementType value)
 {
 	if (Empty(Head))
@@ -140,7 +140,7 @@ int GetLocation(LinkList Head, ElementType value)
 }
 
 
-//Çóµ¥Á´±íµÄ³¤¶È
+//æ±‚å•é“¾è¡¨çš„é•¿åº¦
 int length(LinkList Head)
 {
 	LinkList p;
@@ -154,7 +154,7 @@ int length(LinkList Head)
 	return len;
 }
 
-//ÈÎÒâÎ»ÖÃ²åÈë
+//ä»»æ„ä½ç½®æ’å…¥
 bool InsertNode(LinkList Head, int k, ElementType value)
 {
 	if (k < 1)
@@ -171,7 +171,7 @@ bool InsertNode(LinkList Head, int k, ElementType value)
 	{
 		if (i == k)
 		{
-			Temp = (LinkList)malloc(sizeof(LinkList));  //ĞÂ½¨Ò»¸ö½áµã
+			Temp = (LinkList)malloc(sizeof(LinkList));  //æ–°å»ºä¸€ä¸ªç»“ç‚¹
 			Temp->Data = value;
 			Temp->Next = p->Next;
 			p->Next = Temp;
@@ -185,7 +185,7 @@ bool InsertNode(LinkList Head, int k, ElementType value)
 
 }
 
-// É¾³ıÖ¸¶¨ÔªËØ½Úµã
+// åˆ é™¤æŒ‡å®šå…ƒç´ èŠ‚ç‚¹
 bool DelValue(LinkList Head, ElementType value)
 {
 	if (Empty(Head))
@@ -210,7 +210,7 @@ bool DelValue(LinkList Head, ElementType value)
 }
 
 
-// É¾³ıÖ¸¶¨ÏÂ±ê½Úµã
+// åˆ é™¤æŒ‡å®šä¸‹æ ‡èŠ‚ç‚¹
 bool DelIndex(LinkList Head, int k)
 {
 	if (Empty(Head))
@@ -245,13 +245,13 @@ bool DelIndex(LinkList Head, int k)
 }
 
 
-//Çå¿ÕÁ´±í
+//æ¸…ç©ºé“¾è¡¨
 void ClearList(LinkList Head)
 {
 	Head->Next = NULL;
 }
 
-//´òÓ¡ËùÓĞÔªËØ
+//æ‰“å°æ‰€æœ‰å…ƒç´ 
 void PrintList(LinkList Head)
 {
 	LinkList p = Head->Next;
