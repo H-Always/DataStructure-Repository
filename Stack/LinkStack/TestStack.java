@@ -7,9 +7,7 @@
  */
 public class TestStack {
     public static void main(String[] args) {
-        Stack<Integer> ys = new Stack<>();
-
-
+        Stack ys = new Stack();
 
         for (int i = 0; i < 10; i++) {
             ys.push(i);
@@ -18,7 +16,7 @@ public class TestStack {
         System.out.println(ys.getCapacity());
 
 
-        int a = ys.pop();
+        int a = (int) ys.pop();
         System.out.println(a);
         System.out.println(ys.getCapacity());
         System.out.println(ys.popAll());
