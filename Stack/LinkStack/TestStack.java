@@ -7,9 +7,9 @@
  */
 public class TestStack {
     public static void main(String[] args) {
-        Stack<Integer> ys = new Stack();
+        Stack<Integer> ys = new Stack<>();
 
-        ys.pop();
+
 
         for (int i = 0; i < 10; i++) {
             ys.push(i);
