@@ -8,7 +8,7 @@ import java.util.List;
  * @date: 2020/1/25/15:09
  * @Version: 1.0
  */
-public class Stack <T> {
+public class Stack {
 
     static final int SIZE = 10;
 
@@ -42,21 +42,20 @@ public class Stack <T> {
     }
 
     //入栈
-    public boolean push(T data) {
+    public void push(Object data) {
         if (isFull())
-            return false;
+            return;
 
         this.stack[Size] = data;
         this.Size++;
-        return true;
     }
 
     //弹栈
-    public T pop() {
+    public Object pop() {
         if (isEmpty())
             throw new NullPointerException();
 
-        T data = (T) (stack[--Size]);
+        Object data = (stack[--Size]);
         stack[Size] = null;
 
         return data;
@@ -64,10 +63,10 @@ public class Stack <T> {
 
     //弹出所有栈中元素
     //返回一个列表
-    public List<T> popAll() {
-        List<T> stack = new ArrayList<>();
+    public List<Object> popAll() {
+        List<Object> stack = new ArrayList<>();
         for (int i = this.Size - 1; i >= 0; i--) {
-            stack.add((T)this.stack[i]);
+            stack.add(this.stack[i]);
             this.stack[i] = null;
         }
         this.Size = 0;
