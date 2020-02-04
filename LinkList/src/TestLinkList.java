@@ -26,6 +26,7 @@ public class TestLinkList extends LinkNode {
         System.out.println(ys.getNode(11));
         System.out.println(ys.deleteData(9));
         ys.print();
+        ys.print();
 
     }
 }
