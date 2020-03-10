@@ -16,7 +16,9 @@ public class LinkNode <T> {
         int data;//数据域
         Node next;//地址域
 
-        public Node(){//将头结点初始化为  data=-1   next=null
+        //将头结点初始化为  data=-1   next=null
+        //不想浪费头节点也可以在头节点里存点东西，例如长度
+        public Node(){
             this(-1);
         }
 
