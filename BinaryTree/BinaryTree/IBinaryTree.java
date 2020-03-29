@@ -1,10 +1,13 @@
+import java.util.List;
+
 /**
  * @ClassName: IBinaryTree
  * @Description: TODO 二叉树功能接口
  * @Author: 余霜
  * @date: 2020/1/29/14:34
- * @Version: 1.0
+ * @Version: 1.1
  */
+
 public interface IBinaryTree<T> {
 
     //判断是否是满二叉树
@@ -54,6 +57,9 @@ public interface IBinaryTree<T> {
 
     //层次遍历二叉树
     void levelOrder();
+
+    //Bfs遍历树
+    List<TreeNode> Bfs_tree(TreeNode root);
 
     //清空树
     boolean clear();
