@@ -1,13 +1,16 @@
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 /**
  * @ClassName: BinaryTree
  * @Description: TODO 二叉树实现
  * @Author: 余霜
  * @date: 2020/1/29/14:31
- * @Version: 1.0
+ * @Version: 1.1
+ */
+
+/*
+    2020/3/29/20:50
+    增加了树的BFS
  */
 
 // 这个是排序二叉树的插入
@@ -290,6 +293,25 @@ public class BinaryTree<T> implements IBinaryTree<T> {
             }
         }
         System.out.println();
+    }
+
+
+    //BFS，本质和上面的一样，看着能简单点，返回一个链表,遍历一下链表就可以得到层次遍历
+    @Override
+    public List<TreeNode> Bfs_tree(TreeNode root) {
+        Queue<TreeNode> myq = new LinkedList<>();
+        List<TreeNode> res = new ArrayList<>();
+        if (root == null) return null;
+        myq.add(root);
+        while (!myq.isEmpty()) {
+            int len = myq.size();
+            for (int i = 0; i < len; i++) {
+                if (myq.peek().leftNode != null) myq.add(myq.peek().leftNode);
+                if (myq.peek().rightNode != null) myq.add(myq.peek().rightNode);
+                res.add(myq.poll());
+            }
+        }
+        return res;
     }
 
     @Override
