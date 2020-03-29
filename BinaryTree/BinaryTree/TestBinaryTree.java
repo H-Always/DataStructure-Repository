@@ -1,9 +1,14 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
 /**
  * @ClassName: TestBinaryTree
  * @Description: TODO 二叉树测试
  * @Author: 余霜
  * @date: 2020/1/29/15:36
- * @Version: 1.0
+ * @Version: 1.1
  */
 public class TestBinaryTree {
     public static void main(String[] args) {
@@ -48,6 +53,16 @@ public class TestBinaryTree {
         System.out.println(ys.isEmpty());
         ys.clear();
         System.out.println(ys.isEmpty());
+
+
+        System.out.println("BFS");
+        List<TreeNode> list = ys.Bfs_tree(root);
+
+        for (TreeNode o : list) {
+            System.out.print(o.data+"\t");
+        }
     }
+
+
 
 }
